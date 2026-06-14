@@ -1,0 +1,35 @@
+{
+  "name": "ts-sprint",
+  "version": "1.0.0",
+  "description": "TypeScript by Example - a hands-on tutorial of self-contained, runnable examples",
+  "type": "module",
+  "scripts": {
+    "ex": "tsx",
+    "ex:watch": "tsx watch",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --noEmit --watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "tsx examples/03_libraries/10_testing/01_node_test.ts"
+  },
+  "keywords": [
+    "typescript",
+    "tutorial",
+    "examples"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.9.3",
+    "prettier": "^3.8.4",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.21",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "zod": "^4.4.3"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // Press F5 with any example file open. Set breakpoints by clicking the
+      // gutter (left of the line numbers) or pressing F9, then F5 to run and
+      // stop on them. Uses Node with the tsx loader so .ts runs directly and
+      // source maps line up with your code.
+      "name": "TS: Debug current file (tsx)",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}",
+      "runtimeArgs": ["--import", "tsx"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "sourceMaps": true
+    },
+    {
+      // Same, but pauses on the very first line (like a breakpoint at the top).
+      "name": "TS: Debug current file (break on entry)",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}",
+      "runtimeArgs": ["--import", "tsx"],
+      "stopOnEntry": true,
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "sourceMaps": true
+    }
+  ]
+}

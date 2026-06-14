@@ -1,0 +1,5 @@
+{
+  "js/ts.tsdk.path": "node_modules\\typescript\\lib",
+  "debug.javascript.codelens.npmScripts": "all",
+  "debug.openDebug": "openOnSessionStart"
+}

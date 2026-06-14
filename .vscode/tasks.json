@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "TS: Watch current file (tsx)",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "ex:watch", "--", "${file}"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "TS: Typecheck watch",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "typecheck:watch"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": false
+      },
+      "problemMatcher": "$tsc-watch"
+    }
+  ]
+}

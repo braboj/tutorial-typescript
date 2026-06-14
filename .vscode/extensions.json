@@ -1,0 +1,11 @@
+{
+  // Extensions VSCode will offer to install when this project is opened.
+  // The first two give the PyCharm/IntelliJ look (see docs/pycharm-look.md);
+  // the dark-theme ones are optional alternatives.
+  "recommendations": [
+    "c75.real-intellij-light",
+    "chadalen.vscode-jetbrains-icon-theme",
+    "rokoroku.vscode-theme-darcula",
+    "nicohlr.pycharm"
+  ]
+}
