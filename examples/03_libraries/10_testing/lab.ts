@@ -28,7 +28,9 @@ function makeRange(n: number): number[] {
   if (n < 0) throw new Error("negative length");
   return Array.from({ length: n }, (_, i) => i);
 }
-async function loadConfig(name: string): Promise<{ name: string; ok: boolean }> {
+async function loadConfig(
+  name: string,
+): Promise<{ name: string; ok: boolean }> {
   if (name === "") throw new Error("empty name");
   return { name, ok: true };
 }

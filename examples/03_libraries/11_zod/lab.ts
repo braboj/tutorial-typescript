@@ -22,7 +22,6 @@
 
 // TODO: your code here
 
-
 // ---------------------------------------------------------------------------
 // Task 2 - Apply a default value
 // Define a schema with a `currency` field of z.string() that defaults to
@@ -31,7 +30,6 @@
 // Expected: EUR
 
 // TODO: your code here
-
 
 // ---------------------------------------------------------------------------
 // Task 3 - Derive a static type with z.infer
@@ -43,7 +41,6 @@
 
 // TODO: your code here
 
-
 // ---------------------------------------------------------------------------
 // Task 4 - safeParse a bad value and check success
 // Define a schema { age: z.number().int().positive() }. Use safeParse on
@@ -51,7 +48,6 @@
 // Expected: false
 
 // TODO: your code here
-
 
 // ---------------------------------------------------------------------------
 // Task 5 - Count and list the failing field paths
@@ -64,7 +60,6 @@
 
 // TODO: your code here
 
-
 // ---------------------------------------------------------------------------
 // Task 6 - A transforming schema
 // Build a schema that trims a string and requires at least one character.
@@ -73,7 +68,6 @@
 // Tip: z.string().trim().min(1)
 
 // TODO: your code here
-
 
 // ---------------------------------------------------------------------------
 // Task 7 - A cross-field refinement
