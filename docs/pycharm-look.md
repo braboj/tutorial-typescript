@@ -21,8 +21,8 @@ code --install-extension nicohlr.pycharm                   # Extra PyCharm dark 
 
 ## 2. User settings
 
-Add these keys to your user `settings.json` (Ctrl+Shift+P → *Preferences: Open User
-Settings (JSON)*):
+Add these keys to your user `settings.json` (Ctrl+Shift+P → _Preferences: Open User
+Settings (JSON)_):
 
 ```jsonc
 {
@@ -31,15 +31,15 @@ Settings (JSON)*):
   "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-light",
 
   // --- Layout (matches PyCharm's defaults) ---
-  "workbench.activityBar.location": "default",   // tool-window stripe on the LEFT edge
-  "workbench.sideBar.location": "left",          // Project tool window on the left
-  "workbench.panel.defaultLocation": "bottom",   // Terminal / Run / Problems at the bottom
+  "workbench.activityBar.location": "default", // tool-window stripe on the LEFT edge
+  "workbench.sideBar.location": "left", // Project tool window on the left
+  "workbench.panel.defaultLocation": "bottom", // Terminal / Run / Problems at the bottom
   "workbench.tree.renderIndentGuides": "always", // project-tree indent guide lines
   "workbench.tree.indent": 20,
-  "explorer.compactFolders": false,              // never collapse a/b/c into one row
-  "breadcrumbs.enabled": true,                   // the navigation bar above the editor
-  "workbench.editor.tabSizing": "shrink",        // single-row, shrinking editor tabs
-  "workbench.editor.showTabs": "multiple"
+  "explorer.compactFolders": false, // never collapse a/b/c into one row
+  "breadcrumbs.enabled": true, // the navigation bar above the editor
+  "workbench.editor.tabSizing": "shrink", // single-row, shrinking editor tabs
+  "workbench.editor.showTabs": "multiple",
 }
 ```
 

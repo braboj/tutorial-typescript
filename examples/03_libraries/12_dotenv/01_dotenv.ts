@@ -31,7 +31,7 @@ function loadConfig(): Config {
 }
 
 const config = loadConfig();
-// -> ts-sprint
+// -> tutorial-typescript
 console.log(config.appName);
 // -> 8080 number
 console.log(config.port, typeof config.port);

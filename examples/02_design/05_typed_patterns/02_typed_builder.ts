@@ -22,7 +22,10 @@ class ConfigBuilder<Provided extends keyof Config = never> {
   private readonly _provided?: (provided: Provided) => void;
 
   // Each setter ADDS its key `K` to the Provided union in the return type.
-  with<K extends keyof Config>(key: K, value: Config[K]): ConfigBuilder<Provided | K> {
+  with<K extends keyof Config>(
+    key: K,
+    value: Config[K],
+  ): ConfigBuilder<Provided | K> {
     this.values[key] = value;
     return this as ConfigBuilder<Provided | K>;
   }

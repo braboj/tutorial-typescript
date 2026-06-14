@@ -16,8 +16,6 @@ function greet(name: string): string {
 // -> Hello, ADA
 console.log(greet("ada"));
 
-
-
 // ---------------------------------------------------------------------------
 // Uncommenting the line below will cause a compile-time error:
 // ~~ Argument of type 'number' is not assignable to parameter of type 'string'.
@@ -25,8 +23,7 @@ console.log(greet("ada"));
 // This is the whole value proposition: mistakes surface as you write, not when
 // a user hits them. If you try to run this code, it will fail at runtime with
 // a TypeError because numbers don't have a toUpperCase method. But with
-// TypeScript, you get an error immediately, and you can fix it before it 
+// TypeScript, you get an error immediately, and you can fix it before it
 // ever runs.
 
 // console.log(greet(42));
-

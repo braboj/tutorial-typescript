@@ -22,26 +22,20 @@ async function main(): Promise<void> {
   // Note: just confirm it constructs without throwing; the exact dump varies,
   // so instead log the boolean below.
   // Expected: source ok: true
-
   // TODO: your code here — build `colors` then log "source ok:", colors instanceof Readable
-
   // -------------------------------------------------------------------------
   // Task 2 - Consume a Readable with async iteration
   // Iterate over a Readable built from [5, 10, 15, 20] and collect the values
   // into an array, then log that array.
   // Tip: `for await (const item of readable) { ... }`
   // Expected: [ 5, 10, 15, 20 ]
-
   // TODO: your code here
-
   // -------------------------------------------------------------------------
   // Task 3 - Sum via async iteration
   // Iterate over a Readable built from [2, 4, 6, 8, 10] and accumulate a total.
   // Log the result in the form shown.
   // Expected: total: 30
-
   // TODO: your code here
-
   // -------------------------------------------------------------------------
   // Task 4 - A Transform that doubles numbers
   // Build a Transform (objectMode) that takes each number chunk and pushes
@@ -50,9 +44,7 @@ async function main(): Promise<void> {
   // Log the collected array.
   // Tip: in the transform callback, call callback(null, chunk * 2).
   // Expected: [ 2, 4, 6 ]
-
   // TODO: your code here
-
   // -------------------------------------------------------------------------
   // Task 5 - A Transform that reverses strings
   // Build a Transform (objectMode) that reverses each string chunk, wire a
@@ -60,9 +52,7 @@ async function main(): Promise<void> {
   // collecting Writable, and log the collected array.
   // Tip: reverse a string with chunk.split("").reverse().join("").
   // Expected: [ 'cba', 'yx', 'olleh' ]
-
   // TODO: your code here
-
   // -------------------------------------------------------------------------
   // Task 6 - Two transforms in one pipeline
   // Wire a pipeline that takes words ["cat", "dog", "owl"], runs them through
@@ -70,7 +60,6 @@ async function main(): Promise<void> {
   // collecting Writable. Order: source -> upper -> bang -> sink.
   // Log the collected array.
   // Expected: [ 'CAT!', 'DOG!', 'OWL!' ]
-
   // TODO: your code here
 }
 
