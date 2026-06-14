@@ -1,0 +1,4 @@
+# Normalize line endings: store all text files with LF in the repo.
+# Enforces the LF-only rule from the project quality conventions and
+# silences core.autocrlf warnings on Windows checkouts.
+* text=auto eol=lf
