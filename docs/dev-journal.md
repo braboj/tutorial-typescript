@@ -49,4 +49,35 @@ setup and workflows.
 - Verification: `npm run typecheck`, `npm run format:check`, and
   `npm test` (4 pass / 0 fail) all green before merge
 
+### Session 2 - Plan and formalize the MVP
+
+- Date: 2026-06-14
+- Tool: Claude Code (Opus 4.8)
+- Key changes:
+  - Ran explore -> agree for the MVP; the core loop is clone -> run ->
+    debug -> experiment, with a generated index page; Playground deferred
+  - Added `docs/SPEC.md` (MVP definition, one-scanner-two-outputs
+    architecture, FR/NFR tables, v0.1.0 -> v1.0.0 release roadmap)
+  - Added five ADRs in `docs/decisions/` (001-005): example runner + CI
+    gate, generated static index, GitHub Pages hosting, page visual
+    identity, licensing
+  - Added `LICENSE.md` (CC BY-NC-SA 4.0); reconciled `package.json`
+    (version reset to 0.0.0 baseline, license set to a LICENSE.md
+    pointer) and the README license section
+  - Excluded `docs/prototype/` from Prettier and tracked the index-page
+    prototype as the visual spec
+  - Opened PR #5; created epic #6, milestones v0.1.0-v1.0.0, issues
+    #7-#19, and the epic/task/spike + P0-P3 labels
+- Decisions (see ADRs):
+  - Index data is generated from `examples/`, never hand-maintained
+    (ADR-002)
+  - Page is framework-free static HTML hosted on GitHub Pages
+    (ADR-002, ADR-003)
+  - Align to the TypeScript palette with an unaffiliated disclaimer; no
+    official logo (ADR-004)
+  - License the repo as content under CC BY-NC-SA 4.0, matching
+    tutorial-git (ADR-005)
+- Verification: `npm run typecheck` and `npm run format:check` both pass
+- Next: SP-A execution audit (#7), the v0.1.0 keystone
+
 <!-- Generated with solid-ai-templates (github.com/braboj/solid-ai-templates) -->
