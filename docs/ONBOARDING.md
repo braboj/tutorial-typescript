@@ -8,22 +8,23 @@ workflows, see [PLAYBOOK.md](PLAYBOOK.md).
 
 - Node.js 20+ (LTS) - check with `node --version`
 - npm 10+ (ships with Node) - check with `npm --version`
-- git 2.13+ (submodule support) - check with `git --version`
+- git 2.13+ - check with `git --version` (submodule support is only needed
+  for the optional conventions submodule below)
 - A TypeScript-aware editor (VS Code recommended) is optional
 
 ## 2. First-time setup
 
-Clone with submodules so the conventions in `docs/solid-ai-templates/`
-are present:
+Clone and install - this is all you need to run and edit the lessons:
 
 ```bash
-git clone --recurse-submodules \
-  https://github.com/braboj/tutorial-typescript.git
+git clone https://github.com/braboj/tutorial-typescript.git
 cd tutorial-typescript
 npm install
 ```
 
-If you already cloned without `--recurse-submodules`:
+The `docs/solid-ai-templates/` submodule (vendored quality conventions) is
+optional and only used by contributors for the agent workflow and reviews;
+the lessons run without it. To fetch it:
 
 ```bash
 git submodule update --init --recursive
