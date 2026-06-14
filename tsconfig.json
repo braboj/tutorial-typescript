@@ -38,5 +38,10 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true
-  }
+  },
+
+  // docs/ holds documentation (including the vendored conventions submodule),
+  // never compilable source - keep it out of type checking so a checkout
+  // without the submodule type-checks identically.
+  "exclude": ["docs"]
 }

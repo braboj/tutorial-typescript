@@ -20,11 +20,11 @@ at a time.
 
 ## Quick start
 
-Prerequisites: Node.js 20+ (LTS) and npm.
+Prerequisites: Node.js 20+ (LTS) and npm. Running the examples needs nothing
+else - no submodule and no build step.
 
 ```bash
-git clone --recurse-submodules \
-  https://github.com/braboj/tutorial-typescript.git
+git clone https://github.com/braboj/tutorial-typescript.git
 cd tutorial-typescript
 npm install
 npm run ex examples/01_language/01_introduction/01_hello_world.ts
@@ -85,15 +85,11 @@ tasks to implement yourself.
 
 ## Development setup
 
-```bash
-git clone --recurse-submodules \
-  https://github.com/braboj/tutorial-typescript.git
-cd tutorial-typescript
-npm install
-```
-
-If you cloned without `--recurse-submodules`, fetch the vendored
-conventions:
+Running the lessons needs only the [Quick start](#quick-start) above.
+Contributors who also want the vendored quality conventions (used by the
+agent workflow and code review) fetch the `docs/solid-ai-templates/`
+submodule - it holds conventions, not example code, so the lessons run
+without it:
 
 ```bash
 git submodule update --init --recursive
