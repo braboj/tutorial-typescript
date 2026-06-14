@@ -100,4 +100,27 @@ setup and workflows.
   `npm run examples:check` (131/131) all pass
 - Next: tag v0.1.0, then v0.2.0 (#11 debug matrix)
 
+### Session 4 - Ship v0.1.0 and v0.2.0
+
+- Date: 2026-06-14
+- Tool: Claude Code (Opus 4.8)
+- Key changes:
+  - Released v0.1.0 (Examples work): merged the runner + CI gate (#9),
+    bumped the manifest 0.0.0 -> 0.1.0, tagged v0.1.0, closed the milestone
+  - SP-C debug matrix (#11): verified tsx source maps resolve to the exact
+    .ts line/column (proxy for breakpoints) and that launch.json is correct;
+    the one worker example uses an inline eval worker, so no config change
+  - Made a no-submodule clone the default learner path (#12, #13): plain
+    git clone in README/ONBOARDING, submodule reframed as contributor-only,
+    tsconfig excludes docs/ so typecheck never depends on the submodule
+  - Released v0.2.0 (Local dev loop): manifest 0.1.0 -> 0.2.0, tagged
+    v0.2.0, closed the milestone
+- Decisions:
+  - Releases bump the package.json version to match the tag via a release
+    PR; PLAYBOOK section 5 updated to that runbook (manifest tracks the tag)
+- Verification: each release PR passed CI (typecheck + format:check +
+  examples:check); manifest matches tag for both releases
+- Next: v0.3.0 (index page) - SP-E (#14), generator (#15), port prototype
+  (#16), Pages deploy (#17)
+
 <!-- Generated with solid-ai-templates (github.com/braboj/solid-ai-templates) -->
