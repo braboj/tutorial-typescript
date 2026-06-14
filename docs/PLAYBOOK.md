@@ -61,10 +61,20 @@ npm run format:check     # verify (use in review)
 ### 3.3 Running examples (tsx)
 
 ```bash
-npm run ex <file>        # every example must run without throwing
+npm run ex <file>        # run a single example
 ```
 
-### 3.4 Tests (node:test)
+### 3.4 Example gate (all lessons)
+
+```bash
+npm run examples:check   # run every lesson; fails if any throws or hangs
+```
+
+Runs every `NN_*.ts` lesson (lab.ts excluded) with a per-file timeout and
+exits non-zero on the first throw or hang. This is the CI "examples work"
+gate (see `docs/decisions/001-example-runner-ci-gate.md`).
+
+### 3.5 Tests (node:test)
 
 ```bash
 npm test                 # runs the node:test lesson

@@ -103,14 +103,16 @@ Common tasks:
 
 ```bash
 npm run typecheck      # tsc --noEmit (no errors expected)
+npm run examples:check # run every lesson; fails if any throws
 npm test               # run the node:test example lesson
 npm run format         # prettier --write .
 npm run format:check   # prettier --check . (quality gate)
 ```
 
 No database, broker, or other external service is required - every
-example runs on Node.js alone. New contributors should read
-[docs/ONBOARDING.md](docs/ONBOARDING.md) next.
+example runs on Node.js alone. GitHub Actions runs `typecheck`,
+`format:check`, and `examples:check` on every push and pull request. New
+contributors should read [docs/ONBOARDING.md](docs/ONBOARDING.md) next.
 
 ## Configuration reference
 

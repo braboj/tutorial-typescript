@@ -75,6 +75,7 @@ npm run typecheck          # tsc --noEmit (no errors expected)
 npm run typecheck:watch    # type check in watch mode
 npm run format             # prettier --write .
 npm run format:check       # prettier --check . (CI/quality gate)
+npm run examples:check     # run every lesson; fail on throw (CI gate)
 npm test                   # run the node:test example lesson
 ```
 
@@ -132,13 +133,14 @@ additions and deliberate overrides.
 ## 3. Quality
 
 This repo has no build artifact and no coverage gate - the quality gates
-are type safety and formatting.
+are type safety, formatting, and a runnable-examples check.
 
 ### 3.1 Gates
 
 - `npm run typecheck` MUST pass with zero errors before every commit
 - `npm run format:check` MUST pass before every commit
-- Every example MUST actually run via `tsx` without throwing
+- `npm run examples:check` MUST pass - every lesson runs without throwing or hanging
+- CI (GitHub Actions) runs these gates on every push and pull request
 
 ### 3.2 Testing (override)
 

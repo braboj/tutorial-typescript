@@ -80,4 +80,24 @@ setup and workflows.
 - Verification: `npm run typecheck` and `npm run format:check` both pass
 - Next: SP-A execution audit (#7), the v0.1.0 keystone
 
+### Session 3 - Example runner and CI gate
+
+- Date: 2026-06-14
+- Tool: Claude Code (Opus 4.8)
+- Key changes:
+  - SP-A execution audit (#7): all 131 lesson files run clean via tsx
+    (exit 0, self-terminating, no setup/input/network deps); closed #7
+    and #10 (no throwers to fix)
+  - Added `tools/run-examples.ts`: runs every lesson (lab.ts excluded)
+    with a per-file timeout, fails on any throw or hang
+  - Added the `examples:check` npm script and `.github/workflows/ci.yml`
+    (typecheck + format:check + examples:check on push and PR)
+  - Documented the gate in README, PLAYBOOK (3.4), and CLAUDE.md
+- Decisions:
+  - Runner runs lessons serially with a 20s per-file timeout; the EXCLUDE
+    list is empty because SP-A found no non-terminating lessons (ADR-001)
+- Verification: `npm run typecheck`, `npm run format:check`, and
+  `npm run examples:check` (131/131) all pass
+- Next: tag v0.1.0, then v0.2.0 (#11 debug matrix)
+
 <!-- Generated with solid-ai-templates (github.com/braboj/solid-ai-templates) -->

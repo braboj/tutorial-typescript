@@ -10,6 +10,7 @@
     "typecheck:watch": "tsc --noEmit --watch",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "examples:check": "tsx tools/run-examples.ts",
     "test": "tsx examples/03_libraries/10_testing/01_node_test.ts"
   },
   "keywords": [
