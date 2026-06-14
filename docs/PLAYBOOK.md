@@ -107,10 +107,18 @@ npm update               # then re-run section 3 checks
 
 ## 5. Release and deploy
 
-This repo is not published and not deployed - there is no release
-artifact. To mark a teaching milestone, tag the commit:
+This repo is not published, but its `package.json` version tracks the
+milestone tags in the roadmap (see [SPEC.md](SPEC.md)). The manifest
+version MUST match the tag (see `base/core/git.md`). To cut a release:
 
 ```bash
+# 1. bump the manifest on a release branch, then open and merge the PR
+git checkout -b chore/release-vX.Y.Z
+# set package.json "version" to X.Y.Z
+git commit -am "chore: release vX.Y.Z"
+git push -u origin chore/release-vX.Y.Z
+
+# 2. tag the merged commit on main
 git checkout main && git pull
 git tag -a vX.Y.Z -m "vX.Y.Z - <milestone>"
 git push origin vX.Y.Z
