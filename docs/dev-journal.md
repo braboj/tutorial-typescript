@@ -62,8 +62,8 @@ setup and workflows.
     gate, generated static index, GitHub Pages hosting, page visual
     identity, licensing
   - Added `LICENSE.md` (CC BY-NC-SA 4.0); reconciled `package.json`
-    (version 1.0.0 -> 0.0.0 baseline, license -> `SEE LICENSE IN
-LICENSE.md`) and the README license section
+    (version reset to 0.0.0 baseline, license set to a LICENSE.md
+    pointer) and the README license section
   - Excluded `docs/prototype/` from Prettier and tracked the index-page
     prototype as the visual spec
   - Opened PR #5; created epic #6, milestones v0.1.0-v1.0.0, issues
