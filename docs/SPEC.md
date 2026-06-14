@@ -96,8 +96,8 @@ Requirement levels follow RFC 2119 (MUST, SHOULD, MAY).
 
 Milestones ship as SemVer tags; the final MVP is `v1.0.0`. Each tag is an
 independently shippable increment with a release gate that MUST pass before it
-ships. The release ritual follows the no-build path in
-[git.md](solid-ai-templates/templates/base/core/git.md).
+ships. The release ritual follows the release process in
+[PLAYBOOK.md](PLAYBOOK.md) (section 5) - bump the manifest, then tag.
 
 | Tag        | Theme           | Delivers                                                                                                                                                                                                                                                | Release gate                                                             |
 | ---------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |

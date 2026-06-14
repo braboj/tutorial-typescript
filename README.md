@@ -65,6 +65,7 @@ examples/              # runnable lessons grouped by topic (start here)
   01_language/         # language fundamentals (types, classes, async, ...)
   02_design/           # OOP, SOLID, patterns, secure & typed design
   03_libraries/        # standard library + npm packages (zod, express, ...)
+tools/                 # repo tooling (run-examples.ts: the examples gate)
 docs/                  # contributor and agent documentation
   solid-ai-templates/  # vendored conventions (git submodule)
   decisions/           # architecture decision records (ADRs)
@@ -72,6 +73,7 @@ docs/                  # contributor and agent documentation
   PLAYBOOK.md          # operational reference
   SPEC.md              # system design and MVP plan
   dev-journal.md       # session log
+.github/workflows/     # CI (typecheck, format, examples gate)
 package.json           # scripts and dependencies
 tsconfig.json          # strict TypeScript config
 prettier.config.js     # formatter config
