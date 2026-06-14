@@ -23,9 +23,18 @@ setup and workflows.
 - Tool: Claude Code (Opus 4.8)
 - Key changes:
   - Ran the solid-ai-templates interview against the repo
-  - Added `CLAUDE.md` at the project root (reference model, pointing at
-    the vendored `docs/solid-ai-templates/` submodule)
+  - Added `CLAUDE.md` (reference model, pointing at the vendored
+    `docs/solid-ai-templates/` submodule)
+  - Added `README.md` (root, 8-section structure) and removed the
+    redundant `examples/README.md`
   - Added `docs/ONBOARDING.md`, `docs/PLAYBOOK.md`, and this journal
+  - Renamed the npm package from `ts-sprint` to `tutorial-typescript`
+    (matches the repo and GitHub remote)
+  - Excluded `docs/solid-ai-templates/` from Prettier and formatted the
+    remaining non-conforming files (format:check now passes repo-wide)
+  - Aligned the dotenv lesson sample `APP_NAME` with the new package name
+  - Added `.gitattributes` (`* text=auto eol=lf`) to enforce LF endings
+  - Merged the above via PR #1 (squash) to `main`
 - Decisions:
   - Chose the reference composition model (templates are vendored as a
     submodule) over inline
@@ -35,8 +44,9 @@ setup and workflows.
   - Recorded two deliberate overrides in CLAUDE.md: `console.log` is
     allowed in `examples/**` as teaching output, and no test-coverage
     gate applies (testing is illustrative via `node:test`)
-- Open gaps:
-  - No `README.md` at the repo root - required by `base/core/git.md`;
-    not created this session (out of agreed scope)
+  - Project display name is "TypeScript by Example"; npm package name is
+    `tutorial-typescript`
+- Verification: `npm run typecheck`, `npm run format:check`, and
+  `npm test` (4 pass / 0 fail) all green before merge
 
 <!-- Generated with solid-ai-templates (github.com/braboj/solid-ai-templates) -->
