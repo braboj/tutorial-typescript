@@ -2,10 +2,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      // Press F5 with any example file open. Set breakpoints by clicking the
-      // gutter (left of the line numbers) or pressing F9, then F5 to run and
-      // stop on them. Uses Node with the tsx loader so .ts runs directly and
-      // source maps line up with your code.
+      // Press F5 with any example file open. Runs in the integrated terminal,
+      // so stdin works by default (a lesson can prompt for input). Set
+      // breakpoints in the gutter (or F9); Node uses the tsx loader so .ts runs
+      // directly and source maps line up with your code.
       "name": "TS: Debug current file (tsx)",
       "type": "node",
       "request": "launch",
