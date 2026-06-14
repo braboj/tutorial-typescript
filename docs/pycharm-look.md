@@ -1,8 +1,10 @@
 # PyCharm-style VSCode setup
 
 A reference for reproducing the PyCharm/IntelliJ look in VSCode (theme + layout +
-icons). All of this lives in your **user** `settings.json` — it is editor-wide, not
+icons). Most of this lives in your **user** `settings.json` — it is editor-wide, not
 tied to this repo. This doc is just the record so you can rebuild it on any machine.
+The one repo-level exception is the parameter-underline override (see section 3),
+which is committed in this project's `.vscode/settings.json`.
 
 ## 1. Extensions
 
@@ -50,12 +52,40 @@ For the **dark** PyCharm look instead, swap the two theme lines:
 "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
 ```
 
-## 3. Quick switching (no JSON needed)
+## 3. Per-repo: clear the parameter underline
+
+The IntelliJ-look themes underline every function parameter. Real PyCharm only
+underlines _reassigned_ parameters, so the theme over-applies the effect. This
+override clears it, matching Python's plain-parameter look.
+
+Unlike the user settings above, this key is committed in this project's
+`.vscode/settings.json` (not your user settings), so it applies for anyone who
+opens the repo with the theme active:
+
+```jsonc
+{
+  // Clear the theme's underline on parameters to match PyCharm's Python look.
+  "editor.semanticTokenColorCustomizations": {
+    "rules": {
+      "parameter": {
+        "fontStyle": "",
+      },
+    },
+  },
+}
+```
+
+`fontStyle: ""` removes the underline (and any bold/italic) while keeping the
+theme's color. If an underline still lingers, the theme is also setting it via a
+TextMate scope; add a matching `editor.tokenColorCustomizations` rule for
+`variable.parameter` as a fallback.
+
+## 4. Quick switching (no JSON needed)
 
 - Color theme: **Ctrl+K Ctrl+T**
 - File icon theme: **Ctrl+K Ctrl+M**
 
-## 4. Reverting to VSCode defaults
+## 5. Reverting to VSCode defaults
 
 ```jsonc
 "workbench.colorTheme": "Light Modern",
