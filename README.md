@@ -67,8 +67,10 @@ examples/              # runnable lessons grouped by topic (start here)
   03_libraries/        # standard library + npm packages (zod, express, ...)
 docs/                  # contributor and agent documentation
   solid-ai-templates/  # vendored conventions (git submodule)
+  decisions/           # architecture decision records (ADRs)
   ONBOARDING.md        # setup guide
   PLAYBOOK.md          # operational reference
+  SPEC.md              # system design and MVP plan
   dev-journal.md       # session log
 package.json           # scripts and dependencies
 tsconfig.json          # strict TypeScript config
