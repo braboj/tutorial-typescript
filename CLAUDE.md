@@ -95,6 +95,17 @@ additions and deliberate overrides.
   learning the concept, not for terseness
 - Keep dependencies between examples at zero; shared helpers are a smell
   in a tutorial - duplicate the small setup instead
+- Write comments on their own line ABOVE the statement - never trailing
+  on the same line
+- Put a blank line before each comment, except the first line inside a
+  block (Prettier strips a blank directly under an opening brace)
+- Separate the runnable code from the lesson's header comment with a
+  `// ===== EXAMPLE =====` banner
+- Annotate each printing call with a `// Expected -> <output>` comment on
+  the line directly above it
+- Favor spread-out over condensed forms: multi-line object literals, an
+  explicit field declaration plus constructor assignment over a parameter
+  property, and plain methods over arrow-function class fields
 
 ### 2.2 Output and console use (override)
 
