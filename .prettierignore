@@ -4,3 +4,6 @@ examples/03_libraries/12_dotenv/config.env
 
 # Vendored conventions submodule - read-only upstream, never reformat locally
 docs/solid-ai-templates/
+
+# Prototype reference artifact - visual spec, ported to generated HTML in v0.3.0
+docs/prototype/
